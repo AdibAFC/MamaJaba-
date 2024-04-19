@@ -6,32 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver's-Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="driver.css">
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo">
-            <img src="images/MamaJaba_logo.png">
-        </a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Help">Help</a>
-        </nav>
 
-        <div class="nav_btnride">
-            <!-- <a href="#" class="nmp">
-                <i class="fa-solid fa-bell" style="color: #ffffff; font-size: 24px;"></i>
-            </a>
-            <a href="#" class="nmp"
-                style="background-color: #ffffff; color: rgb(14, 201, 17); margin-top: 2px; line-height: 20px; padding: 5px; border-radius: 5%;">My
-                Trips</a> -->
-            <a href="#" class="profile-picture">
-                <i class="fa-solid fa-user" style="color: #1d4d9f; font-size: 24px;"></i>
-            </a>
+    <nav>
+        <div class="logo">
+            <h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3>
         </div>
-    </header>
+
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACTS</a></li>
+        </ul>
+        <img src="images/nurul.jpg" class="user-pic" onclick="toggleMenu()">
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="images/nurul.jpg">
+                    <h3>Nurul Abser</h3>
+                </div>
+                <hr>
+
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Edit Profile</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Log Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
 
     <section class="ridereq" id="ridereq">
         <div class="ride-request" style="width: 700px;">
@@ -43,7 +67,7 @@
                     <p style="color: #515357;">11:01 AM</p>
                 </div>
             </div>
-            <button >
+            <button>
                 <a href="rider_details.html" class="see-more">See More</a>
             </button>
         </div>
@@ -80,9 +104,9 @@
             </div>
             <button class="see-more">See More</button>
         </div>
-        
+
     </section>
-    
+
 
     <section class="footer" id="footer">
         <div class="share">
@@ -102,6 +126,13 @@
         </div>
         <div class="credit">credited by <span>aps</span> | all right reserved</div>
     </section>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
 </body>
 
 </html>

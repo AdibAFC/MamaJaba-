@@ -24,7 +24,21 @@
         </nav>
         <div class="nav_btn">
             <a href="login.html" class="button login-button">Login</a>
-            <a href="rider_signup.html" class="button signup-button">SignUp</a>
+            <a href="#" class="button signup-button" id="popupsignup">SignUp</a>
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <!-- <h2>SignUp as?</h2> -->
+                    <div class="options">
+                        <button>
+                            <a href="driver_signup.html" id="driverBtn">SignUp to Drive</a>
+                        </button>
+                        <button>
+                            <a href="rider_signup.html" id="riderBtn">Create a Rider account</a>
+                        </button>
+                    </div>
+                    <button id="closePopup">Close</button>
+                </div>
+            </div>
         </div>
     </header>
     <section class="home" id="home">
@@ -135,7 +149,25 @@
         <div class="credit">credited by <span>aps</span> | all right reserved</div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+
+        const openPopupBtn = document.getElementById("popupsignup");
+        const closePopupBtn = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const riderBtn = document.getElementById("riderBtn");
+        const driverBtn = document.getElementById("driverBtn");
+
+        openPopupBtn.addEventListener("click", () => {
+            popup.style.display = "block";
+        });
+
+        closePopupBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+
+
+
+    </script>
 </body>
 
 </html>

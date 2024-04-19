@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(94, 153, 173, 0.5);
+        }
+
+        .popup-content {
+            background-color: #cb8888;
+            width: 300px;
+            margin: 20% auto;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .options {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #closePopup {
+            margin-top: 20px;
+            background-color: #ea2020;
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #a65656;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="signin">Sign In</button>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Which type of user do you want to sign in as?</h2>
+            <div class="options">
+                <button id="riderBtn">As a Rider</button>
+                <button id="driverBtn">As a Driver</button>
+            </div>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <script>
+
+        const openPopupBtn = document.getElementById("signin");
+        const closePopupBtn = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const riderBtn = document.getElementById("riderBtn");
+        const driverBtn = document.getElementById("driverBtn");
+
+        openPopupBtn.addEventListener("click", () => {
+            popup.style.display = "block";
+        });
+
+        closePopupBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+
+
+
+    </script>
+</body>
+
+</html>
